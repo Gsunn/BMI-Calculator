@@ -1,0 +1,86 @@
+.container {
+  max-width: 50%;
+}
+
+.fondoItem {
+  background-color: #1b756e;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.flexContainer p:first-child {
+  font-size: 20px;
+}
+
+.sexoContainer,
+.alturaContainer,
+.pesoContainer {
+  font-size: 20px;
+  color: white;
+}
+
+.sexoContainer i {
+  font-size: 35px;
+}
+
+.sexoContainer:hover {
+  cursor: pointer;
+  border: 2px solid #2bd3b7;
+}
+
+.active {
+  border: 2px solid #2bd3b7;
+}
+
+.estiloNumero {
+  margin-top: -25px;
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+span > i.fa-solid {
+  color: #2bd3b7;
+}
+
+span > i.fa-solid:hover {
+  cursor: pointer;
+}
+
+span > i.fa-solid:active {
+  box-shadow: 0px 0px 4px #2bd3b7;
+  border-radius: 50%;
+}
+
+.cm {
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  background-color: #ff3366;
+  border-width: 2px;
+  border-color: #ff7390;
+  cursor: ew-resize;
+}
+
+.btnCustom {
+  color: white !important;
+  background-color: #ff3366;
+  border-width: 2px;
+  border-color: #ff7390;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.btnCustom:hover {
+  background-color: #ff3366;
+  border-color: #ffaf90;
+}

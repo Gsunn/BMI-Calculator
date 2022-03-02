@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row">
+    <div class="mt-5 text-center">
+      <h2 class="tituloApp">BMI CALCULATOR</h2>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <div class="fondoItem sexoContainer" [ngClass]="{active : !sexo}">
+          <div class="flexContainer" (click)="setSexo(false)">
+            <i class="fa-solid fa-venus"></i>
+            <p>Femenino</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="fondoItem sexoContainer" [ngClass]="{active : sexo}">
+          <div class="flexContainer" (click)="setSexo(true)">
+            <i class="fa-solid fa-mars"></i>
+            <p>Masculino</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-12">
+        <div class="fondoItem alturaContainer">
+          <div class="flexContainer">
+            <p>Altura</p>
+            <div class="estiloNumero">{{ altura }}<span class="cm"> cm</span></div>
+            <input type="range" (input)="cambiarAltura($event)" class="form-range p-3" [value]="altura" min="120" max="220"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <div class="fondoItem pesoContainer" >
+          <div class="flexContainer">
+            <p>Peso</p>
+            <div class="estiloNumero">{{ peso }}</div>
+            <span>
+              <i class="fa-solid fa-circle-plus" (click)="peso = peso + 1"></i>
+              <i class="fa-solid fa-circle-minus ms-2" (click)="peso = peso - 1"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="fondoItem">
+          <div class="fondoItem pesoContainer">
+            <div class="flexContainer">
+              <p>Edad</p>
+              <div class="estiloNumero">{{ edad }}</div>
+              <span>
+                <i class="fa-solid fa-circle-plus" (click)="edad = edad + 1"></i>
+                <i class="fa-solid fa-circle-minus ms-2" (click)="edad = edad - 1"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-lg-12">
+        <button type="button" class="btn btn-lg btn-block btnCustom" (click)="calcularBMI()">
+          CALCULAR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
